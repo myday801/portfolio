@@ -1,12 +1,94 @@
+@use "../utils/variables";
+
 // home
 .home {
-  margin-top: 5rem;
-  font-size: 3rem;
+  margin-top: 15rem;
+  font-size: 5rem;
   text-align: center;
+
+  h2 {
+    font-weight: 600;
+  }
 }
 
 // about me
 .about {
-  font-size: $section-title;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 15rem;
+}
+
+.greeting {
+  font-weight: 600;
+  font-size: 3rem;
+
+  span {
+    font-weight: 400;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.profile-bg {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #c3d8eb;
+
+  img {
+    margin-top: 20px;
+    width: 70%;
+    object-fit: cover;
+  }
+}
+
+.profile-text {
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.17;
+}
+
+.about-intro {
+  width: 60%;
+}
+
+.about-intro-box {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0px;
+
+  h6 {
+    width: 15%;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
+
+.intro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.intro-item-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.intro-item-desc {
+  font-size: 1.4rem;
+  color: #353535;
+}
+
+// skills
+
+.skills {
+  margin-top: 50px;
+  text-align: center;
 }

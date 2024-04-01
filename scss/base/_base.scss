@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  color: #333;
 }
 
 body {
@@ -9,6 +10,14 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .container {
-  padding: 24px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
 }

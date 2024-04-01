@@ -1,4 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+.intro-title {
+  font-weight: 500;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain)
@@ -143,22 +147,33 @@ progress {
 
 html {
   font-size: 10px;
+  color: #333;
 }
 
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .container {
-  padding: 24px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   border-bottom: 1px solid #eee;
-  background: transparent;
-}
-.header .container {
-  padding: 0 300px;
+  background-color: #fff;
+  z-index: 1030;
 }
 
 .header-nav {
@@ -184,12 +199,86 @@ body {
 }
 
 .home {
-  margin-top: 5rem;
-  font-size: 3rem;
+  margin-top: 15rem;
+  font-size: 5rem;
   text-align: center;
+}
+.home h2 {
+  font-weight: 600;
 }
 
 .about {
-  font-size: 5rem;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 15rem;
+}
+
+.greeting {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.greeting span {
+  font-weight: 400;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.profile-bg {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #c3d8eb;
+}
+.profile-bg img {
+  margin-top: 20px;
+  width: 70%;
+  object-fit: cover;
+}
+
+.profile-text {
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.17;
+}
+
+.about-intro {
+  width: 60%;
+}
+
+.about-intro-box {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0px;
+}
+.about-intro-box h6 {
+  width: 15%;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.intro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.intro-item-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.intro-item-desc {
+  font-size: 1.4rem;
+  color: #353535;
+}
+
+.skills {
+  margin-top: 50px;
+  text-align: center;
 }
