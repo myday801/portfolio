@@ -134,3 +134,9 @@ table {
 progress {
   appearance: none;
 }
+
+a:active,
+a:visited,
+a:link {
+  color: inherit;
+}

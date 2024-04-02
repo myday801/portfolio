@@ -11,14 +11,6 @@
   }
 }
 
-// about me
-.about {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  margin-top: 15rem;
-}
-
 .greeting {
   font-weight: 600;
   font-size: 3rem;
@@ -54,19 +46,31 @@
   line-height: 1.17;
 }
 
+// about me
+
+.main {
+  margin-top: 100px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
 .about-intro {
-  width: 60%;
+  margin: 50px 0;
 }
 
 .about-intro-box {
   display: flex;
-  gap: 40px;
   margin: 20px 0px;
 
   h6 {
-    width: 15%;
+    width: 20%;
     font-weight: 600;
     font-size: 2rem;
+    color: variables.$main-color;
   }
 }
 
@@ -79,6 +83,7 @@
 .intro-item-title {
   font-weight: 600;
   font-size: 1.6rem;
+  color: variables.$main-color;
 }
 
 .intro-item-desc {
@@ -86,9 +91,74 @@
   color: #353535;
 }
 
-// skills
-
-.skills {
+.skills-wrap {
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+  grid-template-rows: 300px 300px 300px;
+  gap: 10px;
   margin-top: 50px;
-  text-align: center;
+}
+
+.skills-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s all ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:hover .skills-textbox {
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover .skills-icon {
+    background: variables.$main-color;
+    box-shadow: 0px 0px 12px 5px rgba(79, 154, 223, 0.25);
+  }
+}
+
+.skills-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: #909090;
+  z-index: 10;
+
+  span {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.2;
+    color: #fff;
+  }
+}
+
+.skills-textbox {
+  position: absolute;
+  top: 30px;
+  width: 380px;
+  height: 250px;
+  padding: 50px 20px 20px 20px;
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+  border-radius: 5px;
+
+  .skills-subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .skills-desc {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+  }
 }
