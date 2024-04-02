@@ -94,7 +94,7 @@
 .skills-wrap {
   display: grid;
   grid-template-columns: 380px 380px 380px;
-  grid-template-rows: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
   gap: 10px;
   margin-top: 50px;
 }
@@ -150,7 +150,7 @@
 
   .skills-subtitle {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 1.2;
     text-align: center;
   }
@@ -158,7 +158,103 @@
   .skills-desc {
     margin-top: 20px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.33;
+  }
+}
+
+// portfolio
+.portfolio {
+  margin-top: 50px;
+}
+
+.pfSwiper {
+  margin-top: 50px;
+  padding: 0 10px;
+}
+
+.swiper-slide {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+
+.pf-thumb {
+  width: 650px;
+  height: 400px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background: #9c9c9c;
+}
+
+.pf-text {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.pf-title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 1.17;
+  color: variables.$main-color;
+}
+
+.pf-desc {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.375;
+}
+
+.pf-keywords-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.pf-keywords-item {
+  @extend .btn;
+  width: auto;
+  height: 30px;
+  padding: 6px;
+
+  border: 1px solid rgba(79, 154, 223, 0.33);
+
+  font-size: 1.2rem;
+  line-height: 1.83;
+
+  color: variables.$main-color;
+}
+
+.pf-link-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 70px;
+}
+
+.pf-link {
+  @extend .btn;
+  width: 120px;
+  height: 40px;
+  background: variables.$main-color;
+
+  a {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    color: #fff;
+  }
+}
+
+.contact {
+  height: 300px;
+  margin-top: 50px;
+
+  .greeting {
+    margin: 100px 0;
+    text-align: center;
   }
 }
