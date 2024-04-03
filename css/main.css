@@ -976,7 +976,8 @@ body {
 }
 
 .home {
-  margin-top: 15rem;
+  height: 100vh;
+  padding: 200px 0px 60px;
   font-size: 5rem;
   text-align: center;
 }
@@ -1018,7 +1019,12 @@ body {
 }
 
 .main {
-  margin-top: 150px;
+  padding: 100px 0px 60px;
+}
+
+.about {
+  height: 100vh;
+  padding: 100px 0px;
 }
 
 .section-title {
@@ -1126,7 +1132,8 @@ body {
 }
 
 .portfolio {
-  margin-top: 150px;
+  height: 100vh;
+  padding: 200px 0px 50px;
 }
 
 .pfSwiper {
@@ -1135,6 +1142,7 @@ body {
 }
 
 .swiper-slide {
+  position: relative;
   display: flex;
   gap: 50px;
   width: 100%;
@@ -1144,8 +1152,10 @@ body {
   width: 650px;
   height: 400px;
   margin-left: 20px;
+}
+.pf-thumb img {
+  object-fit: cover;
   border-radius: 10px;
-  background: #9c9c9c;
 }
 
 .pf-text {
@@ -1186,6 +1196,8 @@ body {
 }
 
 .pf-link-buttons {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -1205,12 +1217,10 @@ body {
 }
 
 .contact {
-  height: 50vh;
-  margin-top: 150px;
-  padding: 0 360px;
+  height: 100vh;
+  margin-top: 100px;
 }
 .contact .greeting {
-  margin: 100px 0;
   line-height: 2;
   text-align: center;
 }

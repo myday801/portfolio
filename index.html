@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
     />
-    <link rel="icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>차영림|웹 포트폴리오</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
         <div class="container">
           <nav class="header-nav">
             <a href="#home"
-              ><img class="logo-pc" src="/images/logo.png" alt="logo"
+              ><img class="logo-pc" src="./images/logo.png" alt="logo"
             /></a>
             <!-- <a href="#"><img class="logo logo-m" src="/images/logo-m.png" alt="logo" /></a> -->
             <ul class="menu">
@@ -38,7 +38,7 @@
             </h3>
             <div class="profile">
               <div class="profile-bg">
-                <img src="/images/profile.png" alt="profile" />
+                <img src="./images/profile.png" alt="profile" />
               </div>
             </div>
             <p class="profile-text">
@@ -50,9 +50,9 @@
       </section>
       <!-- main -->
       <main class="main">
-        <div class="container">
-          <!-- About Me -->
-          <section id="about" class="about">
+        <!-- About Me -->
+        <section id="about" class="about">
+          <div class="container">
             <h3 class="section-title">ABOUT ME</h3>
             <div class="about-intro">
               <!-- About Me - career -->
@@ -164,9 +164,11 @@
                 </li>
               </ul>
             </div>
-          </section>
-          <!-- Portfolio -->
-          <section id="portfolio" class="portfolio">
+          </div>
+        </section>
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio">
+          <div class="container">
             <h3 class="section-title">PORTFOLIO</h3>
             <div class="swiper pfSwiper">
               <ul class="swiper-wrapper">
@@ -345,21 +347,23 @@
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
       <!-- Contact -->
       <section id="contact" class="contact">
-        <h3 class="section-title">CONTACT</h3>
-        <h3 class="greeting">
-          <span>
-            지속적인 학습과 발전을 통해 더 나은 결과물을 만들고자
-            노력하겠습니다. </span
-          ><br />저의 포트폴리오를 봐주셔서 감사합니다!
-        </h3>
+        <div class="container">
+          <h3 class="section-title">CONTACT</h3>
+          <h3 class="greeting">
+            <span>
+              지속적인 학습과 발전을 통해 더 나은 결과물을 만들고자
+              노력하겠습니다. </span
+            ><br />저의 포트폴리오를 봐주셔서 감사합니다!
+          </h3>
+        </div>
       </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <scirpt src="./js/script.js"></scirpt>
   </body>
 </html>
