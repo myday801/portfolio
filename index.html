@@ -17,20 +17,20 @@
       <header class="header">
         <div class="container">
           <nav class="header-nav">
-            <a href="#"
+            <a href="#home"
               ><img class="logo-pc" src="/images/logo.png" alt="logo"
             /></a>
             <!-- <a href="#"><img class="logo logo-m" src="/images/logo-m.png" alt="logo" /></a> -->
             <ul class="menu">
-              <li class="menu-list"><a href="#">about me</a></li>
-              <li class="menu-list"><a href="#">portfolio</a></li>
-              <li class="menu-list"><a href="#">contact</a></li>
+              <li class="menu-list"><a href="#about">about me</a></li>
+              <li class="menu-list"><a href="#portfolio">portfolio</a></li>
+              <li class="menu-list"><a href="#contact">contact</a></li>
             </ul>
           </nav>
         </div>
       </header>
       <!-- Home -->
-      <section class="home">
+      <section id="home" class="home">
         <div class="container">
           <div class="profile-wrap">
             <h3 class="greeting">
@@ -52,7 +52,7 @@
       <main class="main">
         <div class="container">
           <!-- About Me -->
-          <section class="about">
+          <section id="about" class="about">
             <h3 class="section-title">ABOUT ME</h3>
             <div class="about-intro">
               <!-- About Me - career -->
@@ -166,7 +166,7 @@
             </div>
           </section>
           <!-- Portfolio -->
-          <section class="portfolio">
+          <section id="portfolio" class="portfolio">
             <h3 class="section-title">PORTFOLIO</h3>
             <div class="swiper pfSwiper">
               <ul class="swiper-wrapper">
@@ -346,20 +346,20 @@
               <div class="swiper-button-next"></div>
             </div>
           </section>
-          <!-- Contact -->
-          <section class="contact">
-            <h3 class="section-title">Contact</h3>
-            <h3 class="greeting">
-              <span>
-                지속적인 학습과 발전을 통해 더 나은 결과물을 만들고자
-                노력하겠습니다. </span
-              ><br />저의 포트폴리오를 봐주셔서 감사합니다!
-            </h3>
-          </section>
         </div>
       </main>
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <h3 class="section-title">CONTACT</h3>
+        <h3 class="greeting">
+          <span>
+            지속적인 학습과 발전을 통해 더 나은 결과물을 만들고자
+            노력하겠습니다. </span
+          ><br />저의 포트폴리오를 봐주셔서 감사합니다!
+        </h3>
+      </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <scirpt src="/js/script.js"></scirpt>
+    <scirpt src="./js/script.js"></scirpt>
   </body>
 </html>
