@@ -924,6 +924,13 @@ a:link {
   color: inherit;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
 html {
   font-size: 10px;
   color: #333;
@@ -943,6 +950,13 @@ body {
   margin: 0 auto;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -958,39 +972,101 @@ body {
   align-items: center;
   width: 100%;
   height: 80px;
+  padding: 0 40px;
 }
-.header-nav .menu {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1.8rem;
-  text-transform: uppercase;
+@media screen and (min-width: 720px) {
+  .header-nav {
+    padding: 0;
+  }
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+}
+.menu-list:hover a {
+  color: #4f9adf;
 }
 
 .logo-pc {
-  max-width: 300px;
+  display: none;
+}
+@media screen and (min-width: 720px) {
+  .logo-pc {
+    display: block;
+    max-width: 300px;
+  }
+}
+
+.logo-m {
+  display: blcok;
+  max-width: 150px;
+}
+@media screen and (min-width: 720px) {
+  .logo-m {
+    display: none;
+  }
 }
 
 .menu-list {
   margin: 0 4rem;
 }
 
+.btn, .pf-link, .pf-keywords-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
 .home {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  padding: 200px 0px 60px;
-  font-size: 5rem;
+  padding: 150px 0px 20px;
+  font-size: 3rem;
   text-align: center;
 }
-.home h2 {
-  font-weight: 600;
+@media screen and (min-width: 720px) {
+  .home {
+    font-size: 5rem;
+  }
+  .home h2 {
+    font-weight: 600;
+  }
+}
+
+.profile-wrap {
+  position: absolute;
+  left: 50%;
+}
+@media screen and (min-width: 720px) {
+  .profile-wrap {
+    position: relative;
+    left: 0;
+  }
 }
 
 .greeting {
-  font-weight: 600;
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
-.greeting span {
-  font-weight: 400;
+@media screen and (min-width: 720px) {
+  .greeting {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+  .greeting span {
+    font-weight: 400;
+  }
 }
 
 .profile {
@@ -1019,7 +1095,7 @@ body {
 }
 
 .main {
-  padding: 100px 0px 60px;
+  padding: 50px 0px 60px;
 }
 
 .about {
@@ -1067,10 +1143,22 @@ body {
 
 .skills-wrap {
   display: grid;
-  grid-template-columns: 380px 380px 380px;
-  grid-template-rows: 300px 300px;
-  gap: 10px;
   margin-top: 20px;
+}
+@media screen and (min-width: 720px) {
+  .skills-wrap {
+    grid-template-columns: 320px 320px;
+    grid-template-rows: 240px 240px;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills-wrap {
+    grid-template-columns: 380px 380px 380px;
+    grid-template-rows: 300px 300px;
+    gap: 10px;
+  }
 }
 
 .skills-list {
@@ -1108,6 +1196,15 @@ body {
   color: #fff;
 }
 
+@media screen and (min-width: 720px) {
+  .skills-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .skills-icon span {
+    font-size: 3rem;
+  }
+}
 .skills-textbox {
   position: absolute;
   top: 30px;
@@ -1131,6 +1228,44 @@ body {
   line-height: 1.33;
 }
 
+@media screen and (min-width: 720px) {
+  .skills-textbox {
+    width: 320px;
+    height: 240px;
+    padding: 40px 10px 10px 10px;
+  }
+  .skills-subtitle {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .skills-desc {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.33;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills-textbox {
+    width: 380px;
+    height: 250px;
+    padding: 40px 20px 20px 20px;
+  }
+  .skills-subtitle {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .skills-desc {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
+}
 .portfolio {
   height: 100vh;
   padding: 200px 0px 50px;
@@ -1182,6 +1317,7 @@ body {
 .pf-keywords-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -1217,8 +1353,10 @@ body {
 }
 
 .contact {
-  height: 100vh;
-  margin-top: 100px;
+  margin-top: 50px;
+  padding: 100px 0px;
+  color: #f0f0f0;
+  background: #4f9adf;
 }
 .contact .greeting {
   line-height: 2;

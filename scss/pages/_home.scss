@@ -1,23 +1,42 @@
 @use "../utils/variables";
+@import "../utils/mixins";
 
 // home
 .home {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  padding: 200px 0px 60px;
-  font-size: 5rem;
+  padding: 150px 0px 20px;
+  font-size: 3rem;
   text-align: center;
+  @include toTablet {
+    font-size: 5rem;
 
-  h2 {
-    font-weight: 600;
+    h2 {
+      font-weight: 600;
+    }
+  }
+}
+
+.profile-wrap {
+  position: absolute;
+  left: 50%;
+
+  @include toTablet {
+    position: relative;
+    left: 0;
   }
 }
 
 .greeting {
-  font-weight: 600;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  @include toTablet {
+    font-weight: 600;
+    font-size: 3rem;
 
-  span {
-    font-weight: 400;
+    span {
+      font-weight: 400;
+    }
   }
 }
 
@@ -50,7 +69,7 @@
 // about me
 
 .main {
-  padding: 100px 0px 60px;
+  padding: 50px 0px 60px;
 }
 
 .about {
@@ -99,10 +118,19 @@
 
 .skills-wrap {
   display: grid;
-  grid-template-columns: 380px 380px 380px;
-  grid-template-rows: 300px 300px;
-  gap: 10px;
   margin-top: 20px;
+
+  @include toTablet {
+    grid-template-columns: 320px 320px;
+    grid-template-rows: 240px 240px;
+    justify-content: center;
+    gap: 50px;
+  }
+  @include toPc {
+    grid-template-columns: 380px 380px 380px;
+    grid-template-rows: 300px 300px;
+    gap: 10px;
+  }
 }
 
 .skills-list {
@@ -144,6 +172,17 @@
   }
 }
 
+@include toTablet {
+  .skills-icon {
+    width: 50px;
+    height: 50px;
+
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
 .skills-textbox {
   position: absolute;
   top: 30px;
@@ -153,6 +192,50 @@
   border: 1px solid #d9d9d9;
   background: #ffffff;
   border-radius: 5px;
+
+  .skills-subtitle {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .skills-desc {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
+}
+
+@include toTablet {
+  .skills-textbox {
+    width: 320px;
+    height: 240px;
+    padding: 40px 10px 10px 10px;
+  }
+
+  .skills-subtitle {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .skills-desc {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.33;
+  }
+}
+
+@include toPc {
+  .skills-textbox {
+    width: 380px;
+    height: 250px;
+    padding: 40px 20px 20px 20px;
+  }
 
   .skills-subtitle {
     font-weight: 500;
@@ -222,6 +305,7 @@
 .pf-keywords-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -263,8 +347,11 @@
 }
 
 .contact {
-  height: 100vh;
-  margin-top: 100px;
+  margin-top: 50px;
+  padding: 100px 0px;
+  color: #f0f0f0;
+  background: variables.$main-color;
+
   .greeting {
     line-height: 2;
     text-align: center;

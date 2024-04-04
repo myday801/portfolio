@@ -1,3 +1,6 @@
+@use "../utils/variables";
+@import "../utils/mixins";
+
 .header {
   position: fixed;
   top: 0;
@@ -13,7 +16,17 @@
   align-items: center;
   width: 100%;
   height: 80px;
+  padding: 0 40px;
+  @include toTablet {
+    padding: 0;
+  }
+}
 
+.menu {
+  display: none;
+}
+
+@include toTablet {
   .menu {
     width: 100%;
     display: flex;
@@ -23,8 +36,26 @@
   }
 }
 
+.menu-list:hover a {
+  color: variables.$main-color;
+}
+
 .logo-pc {
-  max-width: 300px;
+  display: none;
+
+  @include toTablet {
+    display: block;
+    max-width: 300px;
+  }
+}
+
+.logo-m {
+  display: blcok;
+  max-width: 150px;
+
+  @include toTablet {
+    display: none;
+  }
 }
 
 .menu-list {
