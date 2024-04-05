@@ -759,6 +759,13 @@ swiper-container .swiper-notification {
   border-radius: 50px;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
 .swiper-wrapper {
   margin: 0 auto;
 }
@@ -774,6 +781,12 @@ swiper-container .swiper-notification {
 .swiper-button-prev,
 .swiper-button-next {
   color: #4f9adf;
+}
+@media screen and (max-width: 576px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -956,6 +969,12 @@ body {
   }
 }
 
+.section-title {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -1086,13 +1105,8 @@ body {
   color: #4f9adf;
 }
 
-.main {
-  padding: 5rem 0px 6rem;
-}
-
 .about {
-  height: 100vh;
-  padding: 10rem 0px;
+  padding: 7rem 0px;
 }
 @media screen and (max-width: 576px) {
   .about {
@@ -1100,14 +1114,8 @@ body {
   }
 }
 
-.section-title {
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
 .about-intro {
-  margin: 5rem 0;
+  margin-top: 5rem;
 }
 
 .about-intro-box {
@@ -1147,15 +1155,16 @@ body {
 .skills-wrap {
   display: grid;
   grid-template-columns: repeat(3, minmax(380px, 1fr));
-  grid-template-rows: repeat(2, minmax(250px, 1fr));
-  gap: 10px;
-  min-height: 600px;
+  grid-template-rows: repeat(2, minmax(280px, 1fr));
+  gap: 15px;
 }
 @media screen and (max-width: 992px) {
   .skills-wrap {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
     grid-template-rows: repeat(2, minmax(260px, 1fr));
     justify-content: center;
+    row-gap: 40px;
+    column-gap: 0;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1274,13 +1283,25 @@ body {
 }
 @media screen and (max-width: 992px) {
   .portfolio {
+    height: auto;
     padding: 100px 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .portfolio {
+    padding: 0;
   }
 }
 
 .pfSwiper {
   margin-top: 50px;
   padding: 0 10px;
+}
+@media screen and (max-width: 576px) {
+  .pfSwiper {
+    margin-top: 20px;
+    padding: 0;
+  }
 }
 
 .swiper-slide {
@@ -1292,6 +1313,7 @@ body {
 @media screen and (max-width: 992px) {
   .swiper-slide {
     flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -1307,8 +1329,15 @@ body {
 }
 @media screen and (max-width: 992px) {
   .pf-thumb {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pf-thumb {
+    height: 300px;
   }
 }
 
@@ -1316,12 +1345,19 @@ body {
   display: flex;
   flex-direction: column;
   width: 350px;
+  letter-spacing: -1px;
 }
 @media screen and (max-width: 992px) {
   .pf-text {
-    gap: 15px;
     width: 100%;
-    letter-spacing: -1px;
+    height: 265px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pf-text {
+    height: 290px;
   }
 }
 
@@ -1332,12 +1368,22 @@ body {
   line-height: 1.17;
   color: #4f9adf;
 }
+@media screen and (max-width: 992px) {
+  .pf-title {
+    margin-bottom: 0;
+  }
+}
 
 .pf-desc {
   margin-bottom: 10px;
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 1.375;
+}
+@media screen and (max-width: 992px) {
+  .pf-desc {
+    margin-bottom: 0;
+  }
 }
 
 .pf-keywords-list {

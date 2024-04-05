@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@import "../utils/mixins";
 
 .swiper-wrapper {
   margin: 0 auto;
@@ -14,4 +15,8 @@
 .swiper-button-prev,
 .swiper-button-next {
   color: variables.$main-color;
+
+  @include toMobile {
+    display: none;
+  }
 }

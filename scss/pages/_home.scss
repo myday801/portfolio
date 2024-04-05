@@ -63,27 +63,16 @@
 
 // About me
 
-.main {
-  padding: 5rem 0px 6rem;
-}
-
 .about {
-  height: 100vh;
-  padding: 10rem 0px;
+  padding: 7rem 0px;
 
   @include toMobile {
     height: 100%;
   }
 }
 
-.section-title {
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
 .about-intro {
-  margin: 5rem 0;
+  margin-top: 5rem;
 }
 
 .about-intro-box {
@@ -125,14 +114,15 @@
 .skills-wrap {
   display: grid;
   grid-template-columns: repeat(3, minmax(380px, 1fr));
-  grid-template-rows: repeat(2, minmax(250px, 1fr));
-  gap: 10px;
-  min-height: 600px;
+  grid-template-rows: repeat(2, minmax(280px, 1fr));
+  gap: 15px;
 
   @include toTablet {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
     grid-template-rows: repeat(2, minmax(260px, 1fr));
     justify-content: center;
+    row-gap: 40px;
+    column-gap: 0;
   }
   @include toMobile {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
@@ -252,13 +242,23 @@
   padding: 200px 0px 50px;
 
   @include toTablet {
+    height: auto;
     padding: 100px 0px;
+  }
+
+  @include toMobile {
+    padding: 0;
   }
 }
 
 .pfSwiper {
   margin-top: 50px;
   padding: 0 10px;
+
+  @include toMobile {
+    margin-top: 20px;
+    padding: 0;
+  }
 }
 
 .swiper-slide {
@@ -269,6 +269,7 @@
 
   @include toTablet {
     flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -284,8 +285,14 @@
   }
 
   @include toTablet {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-left: 0;
+  }
+
+  @include toMobile {
+    height: 300px;
   }
 }
 
@@ -293,11 +300,17 @@
   display: flex;
   flex-direction: column;
   width: 350px;
+  letter-spacing: -1px;
 
   @include toTablet {
-    gap: 15px;
     width: 100%;
-    letter-spacing: -1px;
+    height: 265px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @include toMobile {
+    height: 290px;
   }
 }
 
@@ -307,6 +320,10 @@
   font-size: 2.8rem;
   line-height: 1.17;
   color: variables.$main-color;
+
+  @include toTablet {
+    margin-bottom: 0;
+  }
 }
 
 .pf-desc {
@@ -314,6 +331,10 @@
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 1.375;
+
+  @include toTablet {
+    margin-bottom: 0;
+  }
 }
 
 .pf-keywords-list {
