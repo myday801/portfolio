@@ -1,77 +1,75 @@
 @use "../utils/variables";
 @import "../utils/mixins";
 
-// home
+// Home
 .home {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 150px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15rem 0px 2rem;
   font-weight: 600;
-  font-size: 5rem;
+  font-size: 3rem;
+  line-height: 1.2;
   text-align: center;
+
   @include toTablet {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+
+  @include toMobile {
+    font-size: 2.4rem;
   }
 }
 
-.profile-wrap {
-  position: relative;
-
-  @include toTablet {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-.greeting {
-  font-size: 2.8rem;
-  @include toTablet {
-    font-weight: 600;
-    font-size: 3rem;
-
-    span {
-      font-weight: 400;
-    }
-  }
-}
-
-.profile {
+.home__avatar__wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0;
+  margin: 4rem 0;
 }
 
-.profile-bg {
+.home__avatar__bg {
   width: 450px;
   height: 450px;
   border-radius: 50%;
   background: #c3d8eb;
 
-  img {
-    margin-top: 20px;
-    width: 70%;
-    object-fit: cover;
+  @include toTablet {
+    width: 420px;
+    height: 420px;
+  }
+
+  @include toMobile {
+    width: 380px;
+    height: 380px;
   }
 }
 
-.profile-text {
-  font-weight: 600;
-  font-size: 2.8rem;
-  line-height: 1.17;
+.home__avatar {
+  width: 70%;
+  margin-top: 2rem;
+  object-fit: cover;
+
+  @include toTablet {
+    width: 65%;
+    margin-top: 5rem;
+  }
 }
 
-// about me
+.home__text--strong {
+  color: variables.$main-color;
+}
+
+// About me
 
 .main {
-  padding: 50px 0px 60px;
+  padding: 5rem 0px 6rem;
 }
 
 .about {
   height: 100vh;
-  padding: 100px 0px;
+  padding: 10rem 0px;
 
   @include toMobile {
     height: 100%;
@@ -85,12 +83,12 @@
 }
 
 .about-intro {
-  margin: 50px 0;
+  margin: 5rem 0;
 }
 
 .about-intro-box {
   display: flex;
-  margin: 20px 0px;
+  margin: 2rem 0px;
 
   h6 {
     width: 20%;
@@ -102,7 +100,7 @@
 
 @include toMobile {
   .about-intro-box {
-    margin: 10px 0px;
+    margin: 1rem 0px;
     gap: 30px;
   }
 }
