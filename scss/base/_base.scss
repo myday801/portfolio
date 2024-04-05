@@ -1,3 +1,4 @@
+@use "../utils/variables";
 @import "../utils/mixins";
 
 html {
@@ -12,12 +13,16 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-.wrap {
-  margin: 0 auto;
-}
-
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+
+  @include toTablet {
+    padding: 0px 20px;
+  }
+
+  @include toMobile {
+    max-width: 574px;
+  }
 }

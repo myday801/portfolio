@@ -4,60 +4,48 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 20px;
   border-bottom: 1px solid #eee;
   background-color: #fff;
   z-index: 1030;
 }
 
-.header-nav {
+.header__menu {
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  padding: 0 40px;
-  @include toTablet {
-    padding: 0;
+  gap: 10px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+
+  &__item {
+    padding: 8px 16px;
   }
-}
 
-.menu {
-  display: none;
-}
-
-@include toTablet {
-  .menu {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1.8rem;
-    text-transform: uppercase;
+  &__item:hover {
+    color: variables.$main-color;
+    border-bottom: 1px solid variables.$main-color;
   }
-}
-
-.menu-list:hover a {
-  color: variables.$main-color;
-}
-
-.logo-pc {
-  display: none;
-
-  @include toTablet {
-    display: block;
-    max-width: 300px;
-  }
-}
-
-.logo-m {
-  display: blcok;
-  max-width: 150px;
 
   @include toTablet {
     display: none;
   }
 }
 
-.menu-list {
-  margin: 0 4rem;
+.header__logo--pc {
+  max-width: 300px;
+  display: block;
+  @include toTablet {
+    display: none;
+  }
+}
+
+.header__logo--m {
+  display: none;
+  @include toTablet {
+    max-width: 150px;
+    display: block;
+  }
 }

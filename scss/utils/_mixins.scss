@@ -1,13 +1,19 @@
 @import "variables";
 
 @mixin toTablet {
-  @media screen and (min-width: #{$breakpoint-t}) {
+  @media screen and (max-width: #{$breakpoint-t}) {
     @content;
   }
 }
 
 @mixin toPc {
-  @media screen and (min-width: #{$breakpoint-pc}) {
+  @media screen and (max-width: #{$breakpoint-pc}) {
+    @content;
+  }
+}
+
+@mixin toMobile {
+  @media screen and (max-width: #{$breakpoint-m}) {
     @content;
   }
 }
