@@ -18,6 +18,7 @@
   }
 
   @include toMobile {
+    padding-top: 10rem;
     font-size: 2.4rem;
   }
 }
@@ -73,6 +74,10 @@
 
 .about-intro {
   margin-top: 5rem;
+
+  @include toMobile {
+    margin-top: 3rem;
+  }
 }
 
 .about-intro-box {
@@ -90,7 +95,7 @@
 @include toMobile {
   .about-intro-box {
     margin: 1rem 0px;
-    gap: 30px;
+    gap: 68px;
   }
 }
 
@@ -128,7 +133,8 @@
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     grid-template-rows: repeat(3, minmax(260px, 1fr));
     min-height: 100vh;
-    gap: 20px;
+    row-gap: 40px;
+    column-gap: 20px;
   }
 }
 
@@ -247,6 +253,7 @@
   }
 
   @include toMobile {
+    margin-top: 60px;
     padding: 0;
   }
 }
@@ -310,7 +317,7 @@
   }
 
   @include toMobile {
-    height: 290px;
+    height: 325px;
   }
 }
 
@@ -405,5 +412,10 @@
 
   .greeting {
     line-height: 2;
+  }
+
+  @include toMobile {
+    margin-top: 100px;
+    padding: 50px 0px;
   }
 }
