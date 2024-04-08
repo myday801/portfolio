@@ -121,6 +121,9 @@
   grid-template-columns: repeat(3, minmax(380px, 1fr));
   grid-template-rows: repeat(2, minmax(280px, 1fr));
   gap: 15px;
+  max-width: 1200px;
+  width: 100%;
+  margin: -50px auto 0px;
 
   @include toTablet {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
@@ -130,11 +133,9 @@
     column-gap: 0;
   }
   @include toMobile {
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    grid-template-rows: repeat(3, minmax(260px, 1fr));
-    min-height: 100vh;
-    row-gap: 40px;
-    column-gap: 20px;
+    grid-template-columns: repeat(1, minmax(330px, 1fr));
+    grid-template-rows: repeat(6, minmax(264px, 1fr));
+    row-gap: 20px;
   }
 }
 
@@ -206,8 +207,8 @@
   }
 
   @include toMobile {
-    width: 260px;
-    height: 260px;
+    width: 330px;
+    height: 240px;
     padding: 40px 10px 0px;
   }
 
