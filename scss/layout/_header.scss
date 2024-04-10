@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
   border-bottom: 1px solid #eee;
   background-color: #fff;
   z-index: 1030;
@@ -16,7 +16,8 @@
 
 .header__menu {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 1rem;
   font-size: 1.8rem;
   text-transform: uppercase;
 
@@ -28,24 +29,65 @@
     color: variables.$main-color;
     border-bottom: 1px solid variables.$main-color;
   }
+}
 
-  @include toTablet {
-    display: none;
-  }
+.header__toggle {
+  position: absolute;
+  top: 2.3rem;
+  right: 2rem;
+  display: none;
+  font-size: 2rem;
+  background: transparent;
 }
 
 .header__logo--pc {
   max-width: 300px;
   display: block;
-  @include toTablet {
-    display: none;
-  }
 }
 
 .header__logo--m {
   display: none;
-  @include toTablet {
+}
+
+@include toTablet {
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .header__nav {
+    width: 100%;
+  }
+
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 4rem;
+  }
+
+  .header__menu.open {
+    display: flex;
+  }
+
+  .header__toggle {
+    display: block;
+  }
+
+  .header__menu__item {
+    display: block;
+  }
+
+  .header__logo--pc {
+    display: none;
+  }
+
+  .header__logo--m {
     max-width: 150px;
     display: block;
+  }
+
+  .header__menu__item:hover {
+    border-bottom: 0;
   }
 }
